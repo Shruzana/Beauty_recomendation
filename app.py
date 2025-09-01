@@ -15,8 +15,8 @@ ASIN_COL = "parent_asin"
 # ------------------ Load Data ------------------ #
 @st.cache_data
 def load_data():
-    items = pd.read_csv(r"C:\Users\DELL\Desktop\Bow\metadata.csv")
-    interactions = pd.read_csv(r"C:\Users\DELL\Desktop\Bow\reviews.csv")
+    items = pd.read_csv("metadata.csv")
+    interactions = pd.read_csv("reviews.csv")
     return items, interactions
 
 items, interactions = load_data()
@@ -200,3 +200,4 @@ def main():
 # ------------------ Run ------------------ #
 if __name__ == "__main__":
     main()
+
